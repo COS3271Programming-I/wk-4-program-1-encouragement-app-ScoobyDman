@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Myclass {
+	static Scanner userinput = new Scanner(System.in);
+	public static void main(String[] args) {
+		
+		// set up the variables
+		int age; 
+		boolean state;
+		
+		// ask the user for there age and how they are doing
+		System.out.print("How old are you? \n-> ");
+		age = userinput.nextInt();
+		userinput.nextLine();
+		System.out.print("Are you doing good today? (True or False) \n-> ");
+		state = userinput.nextBoolean();
+		userinput.nextLine();
+		
+		// Make at least 5 unique responses from the prompts
+		
+		if ((age < 13 && age >= 0) && state == true) {
+			System.out.println("That's good to hear champ!");
+		}
+		
+		if ((age < 13 && age >= 0) && state == false) {
+			System.out.println("Let me cheer you up with a Joke. Why does Peter Pan never stop flying...\n Because he never lands! ");
+		}
+		
+		if (age >= 13 && state == true) {
+			System.out.println("Glad your doing good today and hope it stays that way!");
+		}
+		
+		if (age >= 13 && state == false) {
+			System.out.println("It can be hard sometimes, but remember, the hard times always eventually pass.");
+		}
+		
+		if (age < 0) {
+			System.out.println("The world is a great place, you will love it.");
+		}
+		
+	}
+}
